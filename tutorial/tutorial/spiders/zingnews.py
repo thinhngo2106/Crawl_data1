@@ -13,7 +13,7 @@ class ZingNewsSpider(scrapy.Spider):
         #kiểm tra điều kiện trang có trả về không, trang có phải là bài viết hay không
         if response.status == 200 and response.css('meta[property="og:url"]::attr("content")').get() != '' and response.css('meta[http-equiv="REFRESH"]::attr("content")').get() is not None:
             #mở file lưu dữ liệu
-            f = open('C:/Users/Thinh/PycharmProjects/untitled1/tutorial/tutorial/spiders/output/output.txt','a+',  encoding='utf-8')
+            f = open('C:/Users/Thinh/PycharmProjects/Crawl_data/tutorial/tutorial/spiders/output/output.txt','a+',  encoding='utf-8')
             print(ZingNewsSpider.dem)
             #lấy link
             url = response.url
